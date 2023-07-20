@@ -11,3 +11,6 @@ The repository contains the following directories:
 - `pdf/`: 📄 Contains PDFs of my research papers and presentations.
 
 - `sessions_data/`: 🚀 Contains data sets used in my astrophysics sessions.
+
+## Contributions
+Contributions to this repository are welcome! If you have any astrophysics-related code, data, or notebooks that you'd like to share, feel free to open a pull request. Let's explore the cosmos together! 🌌🚀
