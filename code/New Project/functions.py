@@ -17,7 +17,7 @@ def preprocess_cluster(data, g_mean_th=18):
 def cmd_plot(data, x_axis, y_axis, alpha=0.8, s=5):
     """
     -------
-    plot isochron
+    plot isochrone
     -------
     """
 
@@ -66,13 +66,15 @@ def fit_curve(data, column, bins = 100):
 def guassian_filter(data, column, mu, std):    
     up = round(mu + 3 * std, 2)
     low = round(mu - 3 * std, 2)
-    print('upper bound:', up) 
-    print('lower bound:', low)
     
     if up > low:
-        df = data[(data['pmra']< up) & (data['pmra'] > low)]
+        print('upper bound:', up) 
+        print('lower bound:', low)
+        df = data[(data[column] < up) & (data[column] > low)]
     else:
-        df = data[(data['pmra']< low) & (data['pmra'] > up)]
+        print('upper bound:', low) 
+        print('lower bound:', up)
+        df = data[(data[column]< low) & (data[column] > up)]
     
     print('cluster length:', len(df))
     return df
